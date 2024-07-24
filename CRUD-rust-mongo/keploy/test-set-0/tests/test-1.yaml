@@ -1,0 +1,41 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8000/api/notes/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "147"
+            Content-Type: application/json
+            Host: localhost:8000
+            Postman-Token: ffb5db55-799c-4b32-8521-48ad5df3ae09
+            User-Agent: PostmanRuntime/7.39.1
+        body: "{\r\n    \"title\": \"You'll learn how to build a CRUD API with FastAPI\",\r\n    \"content\": \"Fastapi is really easy to use\",\r\n    \"category\": \"FastAPI\"\r\n}"
+        timestamp: 2024-07-24T12:00:47.483785563+05:30
+    resp:
+        status_code: 201
+        header:
+            Content-Length: "289"
+            Content-Type: application/json
+            Date: Wed, 24 Jul 2024 06:30:47 GMT
+        body: '{"status":"success","data":{"note":{"id":"66a09f97f5bc1a0ce2f8108f","title":"You''ll learn how to build a CRUD API with FastAPI","content":"Fastapi is really easy to use","category":"FastAPI","published":false,"createdAt":"2024-07-24T06:30:47.508Z","updatedAt":"2024-07-24T06:30:47.508Z"}}}'
+        status_message: Created
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-07-24T12:00:49.60020512+05:30
+    objects: []
+    assertions:
+        noise:
+            body.data.note.createdAt: []
+            body.data.note.updatedAt: []
+            header.Date: []
+    created: 1721802649
+curl: "curl --request POST \\\n  --url http://localhost:8000/api/notes/ \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Postman-Token: ffb5db55-799c-4b32-8521-48ad5df3ae09' \\\n  --header 'Host: localhost:8000' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Cache-Control: no-cache' \\\n  --header 'User-Agent: PostmanRuntime/7.39.1' \\\n  --header 'Content-Type: application/json' \\\n  --header 'Accept: */*' \\\n  --data '{\r\n    \"title\": \"You'll learn how to build a CRUD API with FastAPI\",\r\n    \"content\": \"Fastapi is really easy to use\",\r\n    \"category\": \"FastAPI\"\r\n}'"
