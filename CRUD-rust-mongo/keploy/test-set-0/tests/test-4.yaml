@@ -1,0 +1,46 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8000/api/healthchecker
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Host: localhost:8000
+            Postman-Token: 4cb853d2-ce87-4b41-87d7-56f62edf72c1
+            User-Agent: PostmanRuntime/7.39.1
+        body: ""
+        timestamp: 2024-07-24T12:01:18.628710735+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "69"
+            Content-Type: application/json
+            Date: Wed, 24 Jul 2024 06:31:18 GMT
+        body: '{"status":"success","message":"Build CRUD API with Rust and MongoDB"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-07-24T12:01:20.72822843+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1721802680
+curl: |
+    curl --request GET \
+      --url http://localhost:8000/api/healthchecker \
+      --header 'Host: localhost:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.39.1' \
+      --header 'Accept: */*' \
+      --header 'Cache-Control: no-cache' \
+      --header 'Postman-Token: 4cb853d2-ce87-4b41-87d7-56f62edf72c1' \

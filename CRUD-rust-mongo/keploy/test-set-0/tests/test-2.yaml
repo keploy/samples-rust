@@ -1,0 +1,46 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8000/api/notes/65e81c5396dd22994cacfced
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Host: localhost:8000
+            Postman-Token: 57742350-2918-4418-b1f4-88838a9379cb
+            User-Agent: PostmanRuntime/7.39.1
+        body: ""
+        timestamp: 2024-07-24T12:00:54.652260764+05:30
+    resp:
+        status_code: 404
+        header:
+            Content-Length: "78"
+            Content-Type: application/json
+            Date: Wed, 24 Jul 2024 06:30:54 GMT
+        body: '{"status":"fail","message":"Note with ID: 65e81c5396dd22994cacfced not found"}'
+        status_message: Not Found
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-07-24T12:00:56.679275802+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1721802656
+curl: |
+    curl --request GET \
+      --url http://localhost:8000/api/notes/65e81c5396dd22994cacfced \
+      --header 'Accept: */*' \
+      --header 'Cache-Control: no-cache' \
+      --header 'Postman-Token: 57742350-2918-4418-b1f4-88838a9379cb' \
+      --header 'Host: localhost:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.39.1' \
