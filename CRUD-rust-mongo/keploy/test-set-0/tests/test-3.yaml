@@ -1,0 +1,48 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8000/api/notes/66a09f97f5bc1a0ce2f8108f
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Host: localhost:8000
+            Postman-Token: c7ba8f5e-ecd1-4018-a532-6688f2730eb2
+            User-Agent: PostmanRuntime/7.39.1
+        body: ""
+        timestamp: 2024-07-24T12:01:08.107642897+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "289"
+            Content-Type: application/json
+            Date: Wed, 24 Jul 2024 06:31:08 GMT
+        body: '{"status":"success","data":{"note":{"id":"66a09f97f5bc1a0ce2f8108f","title":"You''ll learn how to build a CRUD API with FastAPI","content":"Fastapi is really easy to use","category":"FastAPI","published":false,"createdAt":"2024-07-24T06:30:47.508Z","updatedAt":"2024-07-24T06:30:47.508Z"}}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-07-24T12:01:10.121660873+05:30
+    objects: []
+    assertions:
+        noise:
+            body.data.note.createdAt: []
+            body.data.note.updatedAt: []
+            header.Date: []
+    created: 1721802670
+curl: |
+    curl --request GET \
+      --url http://localhost:8000/api/notes/66a09f97f5bc1a0ce2f8108f \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.39.1' \
+      --header 'Accept: */*' \
+      --header 'Cache-Control: no-cache' \
+      --header 'Postman-Token: c7ba8f5e-ecd1-4018-a532-6688f2730eb2' \
+      --header 'Host: localhost:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
