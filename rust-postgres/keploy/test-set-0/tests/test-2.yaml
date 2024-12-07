@@ -1,0 +1,49 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/users
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "58"
+            Content-Type: application/json
+            Host: localhost:8080
+            Postman-Token: 312d8f92-051f-41f9-9dc6-2ff25ac24044
+            User-Agent: PostmanRuntime/7.41.2
+        body: |
+            {
+                "name": "riya",
+                "email": "riya1609gmaili.com"
+            }
+        timestamp: 2024-12-07T14:32:56.372330207Z
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+        body: User created
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-12-07T14:32:58.533955962Z
+    objects: []
+    assertions:
+        noise: {}
+    created: 1733581978
+curl: |-
+    curl --request POST \
+      --url http://localhost:8080/users \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.41.2' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 312d8f92-051f-41f9-9dc6-2ff25ac24044' \
+      --header 'Host: localhost:8080' \
+      --data "{\n    \"name\": \"riya\",\n    \"email\": \"riya1609gmaili.com\"\n}\n"
