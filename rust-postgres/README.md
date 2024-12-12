@@ -10,7 +10,7 @@ git clone https://github.com/keploy/samples-rust
 cd samples-rust/rust-crud-
 ```
 ## Using Keploy :
-One-click curl command to install keploy:-
+One-click curl command to install Keploy:-
 ```zsh
 curl --silent -O -L https://keploy.io/install.sh && source install.sh
 ```
