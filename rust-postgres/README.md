@@ -10,26 +10,11 @@ git clone https://github.com/keploy/samples-rust
 cd samples-rust/rust-crud-
 ```
 ## Using Keploy :
-Keploy can be installed on Linux directly and on Windows with the help of WSL. Based on your system architecture, install the keploy latest binary release from here:-
-
-#### Linux
-1. AMD Architecture
-```zsh
-curl --silent --location "https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz" | tar xz -C /tmp
-
-sudo mkdir -p /usr/local/bin && sudo mv /tmp/keploy /usr/local/bin && keploy
-```
-
-<details>
-<Summary> 2. ARM Architecture </Summary>
-
+One-click curl command to install keploy:-
 
 ```zsh
-curl --silent --location "https://github.com/keploy/keploy/releases/latest/download/keploy_linux_arm64.tar.gz" | tar xz -C /tmp
-
-sudo mkdir -p /usr/local/bin && sudo mv /tmp/keploy /usr/local/bin && keploy
+curl --silent -O -L https://keploy.io/install.sh && source install.sh
 ```
-</details>
 
 ### Let's start the PostgreSQL Instance
 Open the root directory path in your terminal and then execute the following command:
