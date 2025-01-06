@@ -1,0 +1,41 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-5
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/users
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: localhost:8080
+            Postman-Token: 55f504cf-e1cf-4093-ab84-7cc2a6c59976
+            User-Agent: PostmanRuntime/7.41.2
+        body: ""
+        timestamp: 2024-12-07T14:34:29.400367458Z
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+        body: '[{"id":1,"name":"krishnan","email":"vkrishnan007@gmaili.com"},{"id":3,"name":"riya","email":"riya1609gmaili.com"},{"id":2,"name":"ramesh","email":"ramesh1500gmaili.com"}]'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-12-07T14:34:31.583486463Z
+    objects: []
+    assertions:
+        noise: {}
+    created: 1733582071
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/users \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.41.2' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 55f504cf-e1cf-4093-ab84-7cc2a6c59976' \
+      --header 'Host: localhost:8080' \

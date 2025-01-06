@@ -1,0 +1,49 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: PUT
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/users/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "62"
+            Content-Type: application/json
+            Host: localhost:8080
+            Postman-Token: a0098c64-2aab-4828-95a8-c99b5276d850
+            User-Agent: PostmanRuntime/7.41.2
+        body: |
+            {
+                "name": "ramesh",
+                "email": "ramesh1500gmaili.com"
+            }
+        timestamp: 2024-12-07T14:34:24.842584289Z
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+        body: User updated
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-12-07T14:34:26.948598586Z
+    objects: []
+    assertions:
+        noise: {}
+    created: 1733582066
+curl: |-
+    curl --request PUT \
+      --url http://localhost:8080/users/2 \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: a0098c64-2aab-4828-95a8-c99b5276d850' \
+      --header 'Host: localhost:8080' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.41.2' \
+      --data "{\n    \"name\": \"ramesh\",\n    \"email\": \"ramesh1500gmaili.com\"\n}\n"
