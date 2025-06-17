@@ -39,3 +39,6 @@ Whether you're a newbie coder or a wizard 🧙‍♀️, your perspective is gol
 📜 [Contribution Guidelines](https://github.com/keploy/keploy/blob/main/CONTRIBUTING.md)
 
 ❤️ [Code of Conduct](https://github.com/keploy/keploy/blob/main/CODE_OF_CONDUCT.md)
+
+3. [Rust-Postgres](https://github.com/keploy/samples-rust/tree/main/rust-postgres) 🚀 - A CRUD REST API application demonstrating Keploy's integration with Rust and PostgreSQL, featuring automated test case generation and validation.
+
