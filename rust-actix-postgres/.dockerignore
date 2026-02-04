@@ -1,0 +1,5 @@
+target/
+keploy/
+.git/
+.env
+keploy_agent.log
