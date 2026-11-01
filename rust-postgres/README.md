@@ -12,7 +12,7 @@ cd samples-rust/rust-crud-
 ## Using Keploy :
 One-click curl command to install Keploy:-
 ```zsh
-curl --silent -O -L https://keploy.io/install.sh && source install.sh
+source /dev/stdin <<<"$(curl -fsSL https://keploy.io/install.sh || echo 'echo Keploy installer download failed >&2; return 1')"
 ```
 ### Let's start the PostgreSQL Instance
 Open the root directory path in your terminal and then execute the following command:
